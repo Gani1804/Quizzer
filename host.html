@@ -3,11 +3,17 @@
 <head>
   <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <body>
 
 <div class="container">
   <h2>Host Panel</h2>
+  <h3>📁 Upload Quiz Excel</h3>
+<input type="file" id="excelFile" accept=".xlsx, .xls" />
+<button onclick="uploadExcel()">Upload</button>
+
   <button onclick="createQuiz()">Create Quiz</button>
+  
 
   <h3>Quiz ID: <span id="quizId"></span></h3>
 
