@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Join Quiz</h2>
+
+  <input id="name" placeholder="Name"><br>
+  <input id="quizId" placeholder="Quiz ID"><br>
+  <button onclick="joinQuiz()">Join</button>
+
+  <div id="game" style="display:none;">
+    <h3 id="question"></h3>
+
+    <div class="timer-bar" id="timer"></div>
+
+    <button class="red" onclick="answer(1)" id="b1"></button>
+    <button class="blue" onclick="answer(2)" id="b2"></button>
+    <button class="yellow" onclick="answer(3)" id="b3"></button>
+    <button class="green" onclick="answer(4)" id="b4"></button>
+  </div>
+</div>
+
+<audio id="tick" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
