@@ -22,6 +22,17 @@ function createQuiz() {
   });
 
   document.getElementById("quizId").innerText = quizId;
+
+  // 🔥 Generate QR
+  const joinURL = "https://gani1804.github.io/Quizzer/player.html?quizId=" + quizId;
+
+  document.getElementById("qrcode").innerHTML = "";
+
+  new QRCode(document.getElementById("qrcode"), {
+    text: joinURL,
+    width: 200,
+    height: 200
+  });
 }
 
 // UPLOAD EXCEL

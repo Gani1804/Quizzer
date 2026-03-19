@@ -28,8 +28,19 @@
 
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
-
 <script src="app.js"></script>
+
+<!-- ✅ QR AUTO-FILL SCRIPT -->
+<script>
+window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("quizId");
+
+  if (id) {
+    document.getElementById("quizId").value = id;
+  }
+};
+</script>
 
 </body>
 </html>
